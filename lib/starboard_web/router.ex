@@ -17,7 +17,7 @@ defmodule StarboardWeb.Router do
   scope "/", StarboardWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", PageController, :landing_page
   end
 
   # Other scopes may use custom stacks.

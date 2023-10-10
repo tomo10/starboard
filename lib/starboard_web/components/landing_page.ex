@@ -1,4 +1,4 @@
-defmodule PortfolioWeb.Components.LandingPage do
+defmodule StarboardWeb.Components.LandingPage do
   @moduledoc """
   A set of components for use in a landing page.
   """

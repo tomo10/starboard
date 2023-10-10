@@ -1,0 +1,95 @@
+<%!-- This should match max_width in `public.html.heex`. Options: ["sm", "md", "lg", "xl", "full"] --%>
+<% max_width = "xl" %>
+
+<LandingPage.hero
+  image_src={~p"/images/landing_page/moi.jpeg"}
+  logo_cloud_title={gettext("Trusted by brands all over the world*")}
+  max_width={max_width}
+>
+  <:title>
+    <span><%= gettext("Thomas") %></span>
+    <span class="text-primary-600">
+      <%= gettext("Full Stack Engineer") %>
+    </span>
+    <span><%= gettext("Edwards") %></span>
+  </:title>
+  <:action_buttons>
+    <.button
+      label={gettext("Get in touch")}
+      link_type="a"
+      color="primary"
+      to="mailto:thce28@gmail.com"
+      size="lg"
+    />
+  </:action_buttons>
+  <:description>
+    <%= gettext(
+      "Software Engineer with a passion for building Full Stack Mobile and Web applications in Elixir, LiveView, React Native, and the PETAL stack. Looking for a full time position, preferably in the Elixir domain"
+    ) %>
+  </:description>
+  <:about_me>
+    <%= gettext(
+      "I place great value on working with intelligent well rounded people who are passionate about what they do. In my spare time I love exploring the great outdoors, playing sport, travelling, reading. Ability to work in the USA or UK"
+    ) %>
+  </:about_me>
+</LandingPage.hero>
+
+<LandingPage.projects
+  title={gettext("Projects")}
+  description={
+    gettext(
+      "Here are a few projects I have built using Elixir and LiveView - including this website!"
+    )
+  }
+  features={[
+    %{
+      title: "Ad Astra",
+      description:
+        "Type in any 2 stars to find out the distance between them and how long it would take to travel from one to the other at various speeds. To the stars!",
+      icon: :rocket_launch,
+      link_to: "/ad-astra",
+      external: false
+    },
+    %{
+      title: "Pangaea",
+      description:
+        "A conservation crowdfunding platform and planet centric social network. Conservation has no borders",
+      icon: :globe_alt,
+      link_to: "https://github.com/tomo10/pangaea_pro",
+      external: true
+    },
+    %{
+      title: "Mass",
+      description:
+        "An application to demonstrate the best of LiveView, Elixir, and the BEAM. For any mass gathering, easily post useful information and updates to attendees",
+      icon: :puzzle_piece,
+      link_to: "https://github.com/tomo10/mass",
+      external: true
+    }
+  ]}
+  max_width={max_width}
+/>
+
+<LandingPage.contact
+  max_width={max_width}
+  socials={[
+    %{
+      image_src: ~p"/images/landing_page/moi.jpeg",
+      title: "Thomas Edwards",
+      other: "thce28@gmail.com",
+      link: "mailto:thce28@gmail.com"
+    },
+    %{
+      image_src: ~p"/images/landing_page/linkedin.jpeg",
+      title: "LinkedIn",
+      other: "",
+      link: "https://www.linkedin.com/in/thomas-edwards-dev/"
+    },
+    %{
+      image_src: ~p"/images/landing_page/github.png",
+      title: "GitHub",
+      other: "",
+      link: "https://github.com/tomo10"
+    }
+  ]}
+/>
